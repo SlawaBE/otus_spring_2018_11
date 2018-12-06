@@ -29,11 +29,13 @@ public class QuestionDaoImpl implements QuestionDao {
             List<String[]> items = csvReader.readAll();
             List<Question> questions = new ArrayList<>();
             for (String[] str : items) {
-                questions.add(new Question(
-                        str[0],
-                        Arrays.asList(str[1].split(";")),
-                        Integer.parseInt(str[2]))
-                );
+                if (str.length == 3) {
+                    questions.add(new Question(
+                            str[0],
+                            Arrays.asList(str[1].split(";")),
+                            Integer.parseInt(str[2]))
+                    );
+                }
             }
             return questions;
         } catch (IOException e) {
