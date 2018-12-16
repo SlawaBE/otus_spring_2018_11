@@ -1,5 +1,6 @@
 package ru.otus.spring01.service;
 
+import org.springframework.stereotype.Service;
 import ru.otus.spring01.domain.Question;
 import ru.otus.spring01.domain.Result;
 
@@ -8,6 +9,7 @@ import java.util.List;
 /**
  * Created by Stanislav on 03.12.2018
  */
+@Service
 public class ResultCheckServiceImpl implements ResultCheckService {
 
     @Override
