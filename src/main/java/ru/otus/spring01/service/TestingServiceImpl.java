@@ -49,7 +49,7 @@ public class TestingServiceImpl implements TestingService {
         }
         student.setResult(resultCheckService.checkResult(questions));
         printReport(pw, student);
-        pw.close();
+        pw.flush();
     }
 
     private void printReport(PrintWriter pw, Student student) {
